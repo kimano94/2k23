@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С НОВЫМ ГОДОМ 2023</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 100%;
+            height: auto;
+        }
+      
+        body {
+            width: 100%;
+            height: auto;
+            background: radial-gradient(#f1f0fb, #fff1ff);
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding-top: 6em;
+        }
+
+        @keyframes col-border {
+            30% {border-color: rgb(132, 0, 255);}
+            20% {border-color:aqua}       
+        }
+        /* rabbit */
+        @keyframes rabbit {
+                50% {transform: rotateY(360deg);}
+                75% {transform: rotate(-360deg);}
+                100% {transform: translate(100px);}
+            }
+            img {
+                display: flex;
+                align-content: flex-end;
+                animation: rabbit 3s infinite 1s alternate;
+            }
+
+        /* snowball */
+        @keyframes snowboll {
+            from {
+                position: absolute;
+                top: 500px;
+                left: 0%;
+            }
+            50% {transform: translate(200px);
+                position: absolute;
+                top: 400px;
+            }
+            to {
+                position: absolute;
+                top: 500px;
+                left: 90%;
+            }
+        }
+            .snowball {
+                animation: snowboll 3s infinite 0.1s alternate;
+            }
+
+            @keyframes post {
+                20%, 40%, 60%, 80% {text-shadow: 0 0 10px #023f1d}
+            }
+
+            h1 {
+                text-shadow: 0 0 10px black;
+                animation: post 1s infinite 3s ease-in-out;
+            }
+        /* Гирлянда */
+            iframe {
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+    </style>
+</head>
+<body>  
+    <div class="box">
+        <iframe src="lightLine/index.html" frameborder="0"></iframe>
+        <img class="rabbit" src="rabbit/img/=).svg" alt="">
+        <img class="snowball" src="snowball/snowball.svg" alt="">       
+    </div>
+    <h1> С НОВЫМ ГОДОМ!!! </h1>
+</body>
+</html>
