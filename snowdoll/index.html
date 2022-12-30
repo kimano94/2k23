@@ -6,14 +6,17 @@
     <title>Document</title>
     <style>
         @keyframes fon {            
-            100% {transform: rotate(360deg);}
+            50% {transform: scale(0.5);}
+            100% {transform: scale(1);}
         }
         body {
+            width: 100%;
+            height: auto;
         }
 
         img {
-            border: 2px solid rgb(255, 255, 255);
-            animation : fon 1s infinite 0.5s ease-in-out;
+            width: 20em;
+            animation : fon 3s infinite 0.5s ease-in-out;
         }
        
         </style>

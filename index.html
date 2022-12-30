@@ -12,6 +12,8 @@
         .box {
             width: 100%;
             height: auto;
+            display: flex;
+            flex-direction: column;
         }
       
         body {
@@ -21,67 +23,148 @@
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
-            padding-top: 6em;
+            padding-top: 1em;
+            animation: col-boder 2s infinite 0.1s ease-in-out;
         }
 
         @keyframes col-border {
             30% {border-color: rgb(132, 0, 255);}
-            20% {border-color:aqua}       
+            20% {border-color:aqua}
         }
         /* rabbit */
-        @keyframes rabbit {
+        /* @keyframes rabbit {
                 50% {transform: rotateY(360deg);}
-                75% {transform: rotate(-360deg);}
                 100% {transform: translate(100px);}
-            }
-            img {
+            } */
+            .rabbit {
                 display: flex;
                 align-content: flex-end;
+                transform: scale(-1, 1);
                 animation: rabbit 3s infinite 1s alternate;
+            }
+
+            .rabbit:hover {    
+
+                transform: scale(1);
             }
 
         /* snowball */
         @keyframes snowboll {
             from {
                 position: absolute;
-                top: 500px;
+                top: 300px;
                 left: 0%;
             }
             50% {transform: translate(200px);
                 position: absolute;
-                top: 400px;
+                top: 200px;
             }
             to {
                 position: absolute;
-                top: 500px;
+                top: 300px;
                 left: 90%;
-            }
+            } 
         }
             .snowball {
                 animation: snowboll 3s infinite 0.1s alternate;
             }
 
-            @keyframes post {
-                20%, 40%, 60%, 80% {text-shadow: 0 0 10px #023f1d}
-            }
+                @keyframes post {
+                    20%, 40%, 60%, 80% {text-shadow: 0 0 10px #023f1d}                    
+                    25% {color: red}       
+                    50% {color: green;}
+                    75% {color: blue;}                    
+                }
 
             h1 {
                 text-shadow: 0 0 10px black;
                 animation: post 1s infinite 3s ease-in-out;
             }
         /* Гирлянда */
-            iframe {
+            /* iframe {
+                width: 100%;
                 position: absolute;
                 top: 0;
-                width: 100%;
-            }
+                
+            } */
+
+        /* Снеговик */
+            /* iframe>.snowdall {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                overflow: hidden;
+            } */
+            
+        .snowdoll {
+            width: 20em;
+
+            animation : fon 3s infinite 0.5s ease-in-out;
+        }
+
+        .snowdoll:hover {
+            transform: rotate(315deg);
+        }
+        /* @keyframes fon {            
+            50% {transform: scale(0.5);}
+            100% {transform: scale(1);}
+        } */
+       
+        .line {
+            padding-top: 8em;
+            display: flex;
+        }
+
+        /* Snowgirl */
+
+        /* .snowgirl {
+            animation: img 3s ease-in infinite;
+        }
+        @keyframes img {
+            0% {box-shadow: 0 0 3px #2571bd;}
+            10% {box-shadow: 0 0 3px rgb(61, 209, 135);}
+            20% {box-shadow: 0 0 3px rgb(139, 216, 62);}
+            30% {box-shadow: 0 0 3px #e6374b;}
+            40% {box-shadow: 0 0 3px #e98513;}
+            50% {box-shadow: 0 0 3px #a03bff}
+            60% {box-shadow: 0 0 3px #389df0;}
+            70% {box-shadow: 0 0 3px #3f29cf}
+            80% {box-shadow: 0 0 3px #cf1f00;}
+            90% {box-shadow: 0 0 3px #19ec2e;}
+            100% {box-shadow: 0 0 3px #2571bd;}
+        } */
+
+        .line>img {
+            width: 25%;
+            height: 300px;
+            border-radius: 10px;
+            animation: img 3s ease-in infinite;
+        }
+        @keyframes img {
+            0% {box-shadow: 0 0 3px #2571bd;}
+            10% {box-shadow: 0 0 3px rgb(61, 209, 135);}
+            20% {box-shadow: 0 0 3px rgb(139, 216, 62);}
+            30% {box-shadow: 0 0 3px #e6374b;}
+            40% {box-shadow: 0 0 3px #e98513;}
+            50% {box-shadow: 0 0 3px #a03bff}
+            60% {box-shadow: 0 0 3px #389df0;}
+            70% {box-shadow: 0 0 3px #3f29cf}
+            80% {box-shadow: 0 0 3px #cf1f00;}
+            90% {box-shadow: 0 0 3px #19ec2e;}
+            100% {box-shadow: 0 0 3px #2571bd;}
+        }
     </style>
 </head>
 <body>  
     <div class="box">
         <iframe src="lightLine/index.html" frameborder="0"></iframe>
-        <img class="rabbit" src="rabbit/img/=).svg" alt="">
-        <img class="snowball" src="snowball/snowball.svg" alt="">       
+        <img class="snowball" src="snowball/snowball.svg" alt=""> 
+        <div class="line">
+            <img class="rabbit" src="rabbit/img/=).svg" alt="">
+            <img class="snowgirl" src="snowgirl/img/snowGirl.svg"> 
+            <img src="tree/img/zxc.svg">           
+            <img class="snowdoll" src="snowdoll/img/snowMan.svg">           
+        </div>              
     </div>
     <h1> С НОВЫМ ГОДОМ!!! </h1>
 </body>
